@@ -2,10 +2,8 @@ package com.jariast.techniques.pullupfield;
 
 public class BasicReport extends Report {
 	
-	private String reportBody;
-
 	public BasicReport() {
-		reportBody = "";
+		super();
 	}
 
 	@Override
@@ -17,11 +15,7 @@ public class BasicReport extends Report {
 		
 		//doing some basic report processes
 		
-		String reportFooter = "\nMade by John Doe";
-		reportFooter += "\nCopyright.";
-		reportFooter += "\n2018";
-		
-		reportBody += reportFooter;
+		addFooter();
 		
 		return reportBody;
 	}
