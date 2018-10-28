@@ -16,5 +16,6 @@ gradle-app.setting
 .classpath
 .project
 .settings/
+.recommenders/
 bin/
 
