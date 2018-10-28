@@ -15,11 +15,7 @@ public class Report {
 		
 		//doing some basic report processes
 		
-		String reportFooter = "\nMade by John Doe";
-		reportFooter += "\nCopyright.";
-		reportFooter += "\n2018";
-		
-		reportBody += reportFooter;
+		addFooter();
 		
 		return reportBody;
 	}
@@ -29,14 +25,18 @@ public class Report {
 		
 		reportBody += reportHeader;
 		
-		//doing some basic report processes
+		//doing some complete report processes
 		
+		addFooter();
+		
+		return reportBody;
+	}
+
+	private void addFooter() {
 		String reportFooter = "\nMade by John Doe";
 		reportFooter += "\nCopyright.";
 		reportFooter += "\n2018";
 		
 		reportBody += reportFooter;
-		
-		return reportBody;
 	}
 }
