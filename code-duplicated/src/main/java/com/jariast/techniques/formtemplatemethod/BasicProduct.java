@@ -2,17 +2,18 @@ package com.jariast.techniques.formtemplatemethod;
 
 public class BasicProduct extends Product {
 
-	private double price;
-	
 	public BasicProduct(double price) {
-		this.price = price;
+		super(price);
 	}
 	
 	@Override
-	public Double getBillableAmount() {
-		double base = price;
-		double tax = base * Product.TAX_RATE;
-		return base + tax;
+	protected Double getBaseAmount() {
+		return price;
+	}
+	
+	@Override
+	protected Double getTaxAmount() {
+		return getBaseAmount() * Product.TAX_RATE;
 	}
 
 }
