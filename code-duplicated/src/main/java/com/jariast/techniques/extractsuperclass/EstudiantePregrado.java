@@ -1,6 +1,6 @@
 package com.jariast.techniques.extractsuperclass;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EstudiantePregrado {
@@ -9,7 +9,7 @@ public class EstudiantePregrado {
 	private List<Asignatura> asignaturas;
 	
 	public EstudiantePregrado() {
-		asignaturas = Collections.emptyList();
+		asignaturas = new ArrayList<>();
 	}
 	
 	public void inscribirAsignatura(Asignatura asignatura) {
