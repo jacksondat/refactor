@@ -17,5 +17,6 @@ gradle-app.setting
 .project
 .settings/
 .recommenders/
+.sonarlint/
 bin/
 
