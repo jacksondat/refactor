@@ -42,35 +42,35 @@ public class EstudianteTest {
 	
 	@Test (expected = Test.None.class)
 	public void deberiaInscribirAsignaturaMenorAMaximoCreditosPosgrado() {
-		EstudiantePosgrado estudiante = new EstudiantePosgrado();
+		Estudiante estudiante = new EstudiantePosgrado();
 		
 		Asignatura asignaturaCincoCreditos = new Asignatura("asignaturaCincoCreditos", 5);
 		Asignatura asignaturaDosCreditos = new Asignatura("asignaturaDosCreditos", 2);
 		
-		estudiante.inscribirAsignaturaPosgrado(asignaturaCincoCreditos);
-		estudiante.inscribirAsignaturaPosgrado(asignaturaDosCreditos);
+		estudiante.inscribirAsignatura(asignaturaCincoCreditos);
+		estudiante.inscribirAsignatura(asignaturaDosCreditos);
 	}
 	
 	@Test (expected = Test.None.class)
 	public void deberiaInscribirAsignaturaIgualAMaximoCreditosPosgrado() {
-		EstudiantePosgrado estudiante = new EstudiantePosgrado();
+		Estudiante estudiante = new EstudiantePosgrado();
 		
 		Asignatura asignaturaCincoCreditos = new Asignatura("asignaturaCincoCreditos", 5);
 		Asignatura asignaturaTresCreditos = new Asignatura("asignaturaTresCreditos", 3);
 		
-		estudiante.inscribirAsignaturaPosgrado(asignaturaCincoCreditos);
-		estudiante.inscribirAsignaturaPosgrado(asignaturaTresCreditos);
+		estudiante.inscribirAsignatura(asignaturaCincoCreditos);
+		estudiante.inscribirAsignatura(asignaturaTresCreditos);
 	}
 	
 	@Test (expected = RuntimeException.class)
 	public void deberiaInscribirAsignaturaMayorAMaximoCreditosPosgrado() {
-		EstudiantePosgrado estudiante = new EstudiantePosgrado();
+		Estudiante estudiante = new EstudiantePosgrado();
 		
 		Asignatura asignaturaCincoCreditos = new Asignatura("asignaturaCincoCreditos", 5);
 		Asignatura asignaturaCuatroCreditos = new Asignatura("asignaturaCuatroCreditos", 4);
 		
-		estudiante.inscribirAsignaturaPosgrado(asignaturaCincoCreditos);
-		estudiante.inscribirAsignaturaPosgrado(asignaturaCuatroCreditos);
+		estudiante.inscribirAsignatura(asignaturaCincoCreditos);
+		estudiante.inscribirAsignatura(asignaturaCuatroCreditos);
 		
 		Assert.fail();
 	}
