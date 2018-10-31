@@ -11,17 +11,13 @@ public class Parqueadero {
 	}
 	
 	public void ingresarVehiculo(Vehiculo vehiculo) {
-		if(vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.MOTO) == 0) {
-			vehiculos.add(vehiculo);
-		} 
-		
-		if(vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.CARRO) == 0) {
-			vehiculos.add(vehiculo);
-		} 
-		
-		if(vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.CAMIONETA) == 0) {
+		if(isVehiculoPermitido(vehiculo)) {
 			vehiculos.add(vehiculo);
 		}
+	}
+
+	private boolean isVehiculoPermitido(Vehiculo vehiculo) {
+		return vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.MOTO) == 0 || vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.CARRO) == 0 || vehiculo.getTipoVehiculo().compareTo(TipoVehiculo.CAMIONETA) == 0;
 	}
 	
 	public int obtenerOcupacion() {
